@@ -1,0 +1,41 @@
+    window.staticConfig = {
+        "chromeNotificationShow":ChromeCheck(),
+        "indicatorShow":{
+            "ul":true,
+            "fl":true
+        }
+    };
+
+    function ChromeCheck() {
+        var uAgent = navigator.userAgent.toLowerCase();
+        var idx = uAgent.indexOf('chrome');
+        if (idx > -1) {
+            var chromeVersion = uAgent.substring(
+                idx + 7, uAgent.indexOf(".", idx)
+            ) * 1;
+            if(chromeVersion > 44) {
+                return true;
+            } else return false;
+        } else return false;
+    };
+
+    /**
+     * @name EDS_CONFIG
+     * @description Константы которые включают или отключают проверку валидности ЭЦП
+     * @returns true or false
+     * @example use like this: EDS_CONFIG.NO_CHECK_DATE
+     * @default false
+     */
+     var EDS_CONFIG = (function() {
+         var constants = {
+             'NO_CHECK_DATE': false, //true - проверка даты нет, false - проверка даты есть
+             'NO_MATCH_UIN': false //true - нет проверки UIN ЭЦП с UIN заявителем, false - есть проверка UIN ЭЦП с UIN заявителем
+         };
+
+         var result = {};
+         for (var n in constants)
+             if (constants.hasOwnProperty(n))
+                 Object.defineProperty(result, n, { value: constants[n] });
+
+         return result;
+     }());

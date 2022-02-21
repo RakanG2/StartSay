@@ -1,0 +1,241 @@
+body {
+ margin: 0;
+ font-family: 'Dongle', sans-serif;
+ font-size: 15px;
+ line-height: 1.8;
+ color: #333;
+}
+
+*,
+*:after,
+*:before{
+    box-sizing: border-box;
+
+
+}
+h1,h2,h3, h4 , h5 {
+margin: 0;
+}
+/* Central Container*/
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+/* home page*/
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/gamepadhome.jpg) center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+.home__title{
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    color: #080808;
+    
+}
+.home__uptitle{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 100px;
+    font-weight: 700;
+    
+    color: #080808;
+    
+}
+.home__inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+}
+/* Button*/
+.Learn{
+display: inline-block;
+vertical-align: top;
+border: 2px solid #fff;
+padding: 8px 30px;
+color: #fff;
+text-transform: uppercase;
+text-decoration: none;
+
+font-size: 20px;
+font-weight: 700;
+transition: color 0.2s linear;
+transition: background-color 0.2s linear;
+}
+
+.Learn:hover{
+    background-color: #fff;
+    color: #080808;
+}
+/* header */
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding-top: 30px;
+
+
+}
+
+/* inside header in line*/
+.header__inside{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* For Logo*/
+.header__logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* For nav*/
+.nav{
+    text-transform: uppercase;
+    font-weight: 20;
+    font-size: 19px;
+}
+
+
+/* for links*/
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 12px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+transition: color 0.25s linear;
+}
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #52eb34;
+    position: absolute;
+    top: 80%;
+    left: 0px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.25s linear
+
+}
+.nav__link:hover:after{
+    
+    opacity: 1;
+
+    
+}
+.nav__link:hover {
+    color: #52eb34;
+
+}
+
+/* second page*/
+.header2{
+    padding: 70px 0;
+}
+
+.header2__block{
+    
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto 40px;
+    
+    text-align: center;
+}
+
+.header2__uptitle{
+    font-size: 25px;
+    color: #080808;
+    font-family: 'Kaushan Script', cursive;
+
+}
+
+
+.Header2__title{
+    font-size: 45px;
+    font-weight: 700;
+    color: #080808;
+}
+
+
+.Header2__title::after{
+content: "";
+display: block;
+width: 50px;
+height: 3px;
+background-color: #080808;
+margin: 35px auto 0;
+}
+
+.header2__paragraph{
+    color:#333;
+    font-size: 25px;
+}
+
+
+
+/*HOW TO*/
+.howto
+{
+   display: flex; 
+   justify-content: space-between ;
+}
+
+.howto__png{
+    width: 360px;
+    
+}
+.howto__png:hover .howto__img{
+transform: translate3d(-12px,-12px,0);
+
+}
+.howto__png:hover .howto__img img {
+
+    opacity: 0.3;
+
+}
+.howto__img{
+    width: 400px;
+    
+    background: linear-gradient(to bottom,#FFAB00,#f3e300);
+transition: transform 0.1s linear;
+}
+
+.howto__img img{
+    display: block;
+    transition: opacity 0.1s linear; 
+}
+
+.carousel-item{
+height: 400px;
+width: 1280px;
+position: relative;
+background-position: center; 
+background-size: cover;
+
+
+}
+
+
+

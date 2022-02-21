@@ -1,0 +1,5 @@
+﻿function getPlaceId() {
+	var prefix = 'KVExtension';
+	var key = 'EGOV_CLIENT_ID';
+	return sessionStorage.getItem(prefix + key);
+}
